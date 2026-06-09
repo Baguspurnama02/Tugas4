@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bermain Bersama Si Bagus</h1>
+    <script>
+        function myGame() {
+            let yourName = prompt("Halo! Siapa nama kamu?");
+            if (!yourName) yourName = "Teman";
+
+            let lanjut = confirm("Hai " + yourName + ", aku Bagus. Mau coba tebak diriku?");
+
+            if (lanjut == false) {
+                alert("Terima kasih sudah bermain, " + yourName + "!");
+                return;
+            }
+
+            let skor = 0;
+
+            let quest1 = prompt("Apa nama panjang ku?");
+            if (quest1 !== null && quest1.toLowerCase() === "bagus purnama rahadi") {
+                alert("Kamu Benar!");
+                skor++;
+            } else {
+                alert("Kamu Salah! Yang benar adalah Bagus Purnama Rahadi");
+            }
+
+            let quest2 = prompt("Tahun berapa aku lahir?");
+            if (quest2 === "2005") {
+                alert("Kamu Benar Lagi!");
+                skor++;
+            } else {
+                alert("Kamu Salah! Yang benar adalah 2005");
+            }
+
+            let quest3 = prompt("Tebak dimana aku kuliah?");
+            if (quest3 !== null && quest3.toLowerCase() === "universitas islam riau") {
+                alert("Kamu Benar Lagi!");
+                skor++;
+            } else {
+                alert("Kamu Salah! Yang benar adalah universitas islam riau");
+            }
+
+            if (skor === 3) {
+                alert("Selamat " + yourName + "! Kamu dapat skor " + skor + "/3. Kamu mengenalku dengan baik!");
+            } else if (skor >= 1) {
+                alert("Bagus " + yourName + "! Kamu dapat skor " + skor + "/3. Coba lagi ya!");
+            } else {
+                alert("Yah " + yourName + ", kamu dapat skor " + skor + "/3. Belum kenal aku nih.");
+            }
+        }
+    </script>
+
+    <button onclick="myGame()">Game Pertanyaan Tentangku</button>
+</body>
+</html>
