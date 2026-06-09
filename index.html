@@ -12,7 +12,7 @@
             let yourName = prompt("Halo! Siapa nama kamu?");
             if (!yourName) yourName = "Teman";
 
-            let lanjut = confirm("Hai " + yourName + ", aku Bagus. Mau coba tebak diriku?");
+            let lanjut = confirm("Hai " + yourName + ", aku Bagus. Mau coba menjawab pertanyaan ku?");
 
             if (lanjut == false) {
                 alert("Terima kasih sudah bermain, " + yourName + "!");
@@ -37,24 +37,24 @@
                 alert("Kamu Salah! Yang benar adalah pekanbaru");
             }
 
-            let quest3 = prompt("Tebak dimana aku kuliah?");
-            if (quest3 !== null && quest3.toLowerCase() === "universitas islam riau") {
+            let quest3 = prompt("Siapa nama panggilan ketua kelas D?");
+            if (quest3 !== null && quest3.toLowerCase() === "fajar") {
                 alert("Kamu Benar Lagi!");
                 skor++;
             } else {
-                alert("Kamu Salah! Yang benar adalah universitas islam riau");
+                alert("Kamu Salah! Yang benar adalah fajar");
             }
 
             if (skor === 3) {
-                alert("Selamat " + yourName + "! Kamu dapat skor " + skor + "/3. Kamu mengenalku dengan baik!");
+                alert("Selamat " + yourName + "! Kamu dapat skor " + skor + "/3. Kamu menjawab dengan benar semua sobat!");
             } else if (skor >= 1) {
-                alert("Bagus " + yourName + "! Kamu dapat skor " + skor + "/3. Coba lagi ya!");
+                alert("Bagus " + yourName + "! Kamu dapat skor " + skor + "/3. Hampir, tapi tidak apa apa sobat!");
             } else {
-                alert("Yah " + yourName + ", kamu dapat skor " + skor + "/3. Belum kenal aku nih.");
+                alert("Yah " + yourName + ", kamu dapat skor " + skor + "/3. Gapapa, coba lagi ya sobat!.");
             }
         }
     </script>
 
-    <button onclick="myGame()">Game Pertanyaan Tentangku</button>
+    <button onclick="myGame()">Game Pertanyaan</button>
 </body>
 </html>
